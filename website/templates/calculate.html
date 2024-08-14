@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Calculate Nutrition{% endblock %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-3 mb-4">Calculate What You've Eaten</h2>
+    <div class="form-group">
+        <label for="mealInput">Meal</label>
+        <input type="text" id="mealInput" class="form-control" placeholder="Start typing a meal name..." oninput="suggestMeals(this.value)">
+        <ul id="suggestionList" class="list-group"></ul>
+    </div>
+    <div class="form-group">
+        <label for="mealAmount">Amount (grams)</label>
+        <input type="number" id="mealAmount" class="form-control" placeholder="Enter amount">
+    </div>
+    <button onclick="addMealToList()" class="btn btn-primary">Add Meal to List</button>
+
+    <ul id="addedMealsList" class="list-group mt-3"></ul>
+    <button onclick="calculateTotalNutrition()" class="btn btn-info mt-3">Calculate Total Nutrition</button>
+
+    <div id="totalNutritionDisplay" class="mt-4" style="display:none;">
+        <h3>Total Nutrition Calculated</h3>
+        <p id="totalCalories"></p>
+        <p id="totalCarbs"></p>
+        <p id="totalProteins"></p>
+        <p id="totalFats"></p>
+    </div>
+</div>
+<script src="static/calculate.js"></script>
+
+{% endblock %}

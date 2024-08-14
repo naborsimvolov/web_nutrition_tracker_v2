@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Manage Meals{% endblock %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-3 mb-4">Your Meals</h2>
+    <ul class="list-group mb-5">
+        {% for meal in user_meals %}
+        <li class="list-group-item">
+            Name: {{ meal.name }}, Calories: {{ meal.calories }}, Carbs: {{ meal.carbs }}g, Proteins: {{ meal.proteins }}g, Fats: {{ meal.fats }}g
+            <button onclick="deleteMeal('{{ meal.id }}')" class="btn btn-danger btn-sm float-right">Delete</button>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2 class="text-center mt-3 mb-4">Add a Meal</h2>
+    <div class="form-group">
+        <label for="mealName">Meal Name</label>
+        <input type="text" class="form-control" id="mealName">
+    </div>
+    <div class="form-group">
+        <label for="calories">Calories (g)</label>
+        <input type="number" step="0.1" class="form-control" id="calories">
+    </div>
+    <div class="form-group">
+        <label for="carbs">Carbohydrates (g)</label>
+        <input type="number" step="0.1" class="form-control" id="carbs">
+    </div>
+    <div class="form-group">
+        <label for="proteins">Proteins (g)</label>
+        <input type="number" step="0.1" class="form-control" id="proteins">
+    </div>
+    <div class="form-group">
+        <label for="fats">Fats (g)</label>
+        <input type="number" step="0.1" class="form-control" id="fats">
+    </div>
+    <button onclick="addMeal()" class="btn btn-primary">Add Meal</button>
+</div>
+<script src="static/meals.js"></script>
+{% endblock %}
+
+

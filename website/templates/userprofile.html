@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}My Profile{% endblock %}
+{% block content %}
+<div class="container">
+  <h3 align="center">Hello, {{ current_user.first_name }}</h3>
+  <div align="center">
+    <a href="/meals" class="btn btn-primary my-2">Manage My Meals Database</a>
+    <a href="/nutrition-graphs" class="btn btn-success my-2">Go to My History Graphs</a>
+  </div>
+</div>
+{% endblock %}

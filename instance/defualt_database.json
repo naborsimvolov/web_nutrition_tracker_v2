@@ -1,0 +1,2249 @@
+[
+    {
+        "food name": "raspberry",
+        "proteins": 1.6,
+        "fats": 0.3,
+        "carbohydrates": 7.1,
+        "kilocalories": 37.5
+    },
+    {
+        "food name": "dough",
+        "proteins": 10.75,
+        "fats": 2.42,
+        "carbohydrates": 51.88,
+        "kilocalories": 272.3
+    },
+    {
+        "food name": "pasta",
+        "proteins": 4.7,
+        "fats": 1.5,
+        "carbohydrates": 28.0,
+        "kilocalories": 144.3
+    },
+    {
+        "food name": "pasta tomato sauce",
+        "proteins": 5.0,
+        "fats": 1.5,
+        "carbohydrates": 25.0,
+        "kilocalories": 133.5
+    },
+    {
+        "food name": "egg",
+        "proteins": 14.0,
+        "fats": 15.0,
+        "carbohydrates": 0.8,
+        "kilocalories": 194.2
+    },
+    {
+        "food name": "turkey breast",
+        "proteins": 30.0,
+        "fats": 2.1,
+        "carbohydrates": 1.5,
+        "kilocalories": 144.9
+    },
+    {
+        "food name": "chocolate 70%",
+        "proteins": 7.0,
+        "fats": 41.0,
+        "carbohydrates": 33.0,
+        "kilocalories": 529.0
+    },
+    {
+        "food name": "milk chocolate average",
+        "proteins": 2.0,
+        "fats": 30.0,
+        "carbohydrates": 58.0,
+        "kilocalories": 510.0
+    },
+    {
+        "food name": "cottage cheese",
+        "proteins": 14.0,
+        "fats": 4.0,
+        "carbohydrates": 3.0,
+        "kilocalories": 104.0
+    },
+    {
+        "food name": "butter",
+        "proteins": 0.9,
+        "fats": 81.0,
+        "carbohydrates": 0.1,
+        "kilocalories": 733.0
+    },
+    {
+        "food name": "shrimps",
+        "proteins": 20.0,
+        "fats": 0.3,
+        "carbohydrates": 0.2,
+        "kilocalories": 83.5
+    },
+    {
+        "food name": "porridge",
+        "proteins": 2.5,
+        "fats": 1.7,
+        "carbohydrates": 12.0,
+        "kilocalories": 73.3
+    },
+    {
+        "food name": "white bread",
+        "proteins": 8.85,
+        "fats": 3.33,
+        "carbohydrates": 49.42,
+        "kilocalories": 263.05
+    },
+    {
+        "food name": "black bread",
+        "proteins": 9.0,
+        "fats": 3.0,
+        "carbohydrates": 51.0,
+        "kilocalories": 267.0
+    },
+    {
+        "food name": "pancakes",
+        "proteins": 5.9,
+        "fats": 10.0,
+        "carbohydrates": 34.0,
+        "kilocalories": 249.6
+    },
+    {
+        "food name": "pork",
+        "proteins": 25.0,
+        "fats": 20.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 280.0
+    },
+    {
+        "food name": "bananas",
+        "proteins": 1.1,
+        "fats": 0.3,
+        "carbohydrates": 23.0,
+        "kilocalories": 99.1
+    },
+    {
+        "food name": "milk",
+        "proteins": 4.6,
+        "fats": 3.6,
+        "carbohydrates": 3.0,
+        "kilocalories": 62.8
+    },
+    {
+        "food name": "cabbage cooked",
+        "proteins": 1.3,
+        "fats": 1.3,
+        "carbohydrates": 5.2,
+        "kilocalories": 37.7
+    },
+    {
+        "food name": "buckwheat porridge",
+        "proteins": 3.0,
+        "fats": 3.6,
+        "carbohydrates": 14.5,
+        "kilocalories": 102.4
+    },
+    {
+        "food name": "hercules porridge",
+        "proteins": 2.4,
+        "fats": 4.0,
+        "carbohydrates": 14.8,
+        "kilocalories": 104.8
+    },
+    {
+        "food name": "rice",
+        "proteins": 2.6,
+        "fats": 0.2,
+        "carbohydrates": 27.8,
+        "kilocalories": 123.4
+    },
+    {
+        "food name": "apple",
+        "proteins": 0.3,
+        "fats": 0.2,
+        "carbohydrates": 14.0,
+        "kilocalories": 59.0
+    },
+    {
+        "food name": "tomato",
+        "proteins": 1.0,
+        "fats": 0.0,
+        "carbohydrates": 5.0,
+        "kilocalories": 24.0
+    },
+    {
+        "food name": "honey",
+        "proteins": 0.4,
+        "fats": 0.0,
+        "carbohydrates": 83.0,
+        "kilocalories": 333.6
+    },
+    {
+        "food name": "almond",
+        "proteins": 21.0,
+        "fats": 52.0,
+        "carbohydrates": 10.0,
+        "kilocalories": 592.0
+    },
+    {
+        "food name": "chocolate cookies",
+        "proteins": 5.8,
+        "fats": 22.0,
+        "carbohydrates": 66.0,
+        "kilocalories": 485.2
+    },
+    {
+        "food name": "liver",
+        "proteins": 21.0,
+        "fats": 4.5,
+        "carbohydrates": 1.9,
+        "kilocalories": 132.1
+    },
+    {
+        "food name": "mushed potatoes",
+        "proteins": 1.7,
+        "fats": 2.8,
+        "carbohydrates": 17.0,
+        "kilocalories": 100.0
+    },
+    {
+        "food name": "red caviar",
+        "proteins": 32.0,
+        "fats": 15.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 263.0
+    },
+    {
+        "food name": "chocolate brownie",
+        "proteins": 6.0,
+        "fats": 29.0,
+        "carbohydrates": 50.0,
+        "kilocalories": 485.0
+    },
+    {
+        "food name": "churros",
+        "proteins": 2.0,
+        "fats": 30.0,
+        "carbohydrates": 48.0,
+        "kilocalories": 470.0
+    },
+    {
+        "food name": "pizza average",
+        "proteins": 8.6,
+        "fats": 5.0,
+        "carbohydrates": 31.0,
+        "kilocalories": 203.4
+    },
+    {
+        "food name": "meatballs",
+        "proteins": 20.6,
+        "fats": 8.0,
+        "carbohydrates": 8.0,
+        "kilocalories": 186.4
+    },
+    {
+        "food name": "zucchini",
+        "proteins": 1.0,
+        "fats": 3.0,
+        "carbohydrates": 5.0,
+        "kilocalories": 51.0
+    },
+    {
+        "food name": "corn porridge",
+        "proteins": 2.0,
+        "fats": 1.0,
+        "carbohydrates": 21.0,
+        "kilocalories": 101.0
+    },
+    {
+        "food name": "crossane",
+        "proteins": 8.0,
+        "fats": 31.0,
+        "carbohydrates": 48.0,
+        "kilocalories": 503.0
+    },
+    {
+        "food name": "mussels",
+        "proteins": 24.0,
+        "fats": 5.0,
+        "carbohydrates": 7.0,
+        "kilocalories": 169.0
+    },
+    {
+        "food name": "beef",
+        "proteins": 26.0,
+        "fats": 14.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 230.0
+    },
+    {
+        "food name": "egg white",
+        "proteins": 11.0,
+        "fats": 0.5,
+        "carbohydrates": 0.5,
+        "kilocalories": 50.5
+    },
+    {
+        "food name": "yolk",
+        "proteins": 16.4,
+        "fats": 31.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 344.6
+    },
+    {
+        "food name": "croutons",
+        "proteins": 10.4,
+        "fats": 18.0,
+        "carbohydrates": 63.0,
+        "kilocalories": 455.6
+    },
+    {
+        "food name": "tomato pasta",
+        "proteins": 1.6,
+        "fats": 15.0,
+        "carbohydrates": 14.3,
+        "kilocalories": 198.6
+    },
+    {
+        "food name": "cheese",
+        "proteins": 25.6,
+        "fats": 35.0,
+        "carbohydrates": 1.3,
+        "kilocalories": 422.6
+    },
+    {
+        "food name": "semolina",
+        "proteins": 4.5,
+        "fats": 2.2,
+        "carbohydrates": 12.0,
+        "kilocalories": 85.8
+    },
+    {
+        "food name": "bell pepper",
+        "proteins": 0.9,
+        "fats": 0.7,
+        "carbohydrates": 6.6,
+        "kilocalories": 36.3
+    },
+    {
+        "food name": "plum pie",
+        "proteins": 5.8,
+        "fats": 13.0,
+        "carbohydrates": 52.0,
+        "kilocalories": 348.2
+    },
+    {
+        "food name": "chicken",
+        "proteins": 31.0,
+        "fats": 3.6,
+        "carbohydrates": 0.0,
+        "kilocalories": 156.4
+    },
+    {
+        "food name": "avocado",
+        "proteins": 2.0,
+        "fats": 15.0,
+        "carbohydrates": 8.5,
+        "kilocalories": 177.0
+    },
+    {
+        "food name": "surimi",
+        "proteins": 7.9,
+        "fats": 0.8,
+        "carbohydrates": 12.4,
+        "kilocalories": 88.4
+    },
+    {
+        "food name": "french fries",
+        "proteins": 3.0,
+        "fats": 14.0,
+        "carbohydrates": 34.4,
+        "kilocalories": 275.6
+    },
+    {
+        "food name": "tiramisu",
+        "proteins": 4.5,
+        "fats": 18.0,
+        "carbohydrates": 24.4,
+        "kilocalories": 277.6
+    },
+    {
+        "food name": "broccoli",
+        "proteins": 2.3,
+        "fats": 2.6,
+        "carbohydrates": 6.9,
+        "kilocalories": 60.2
+    },
+    {
+        "food name": "sausages",
+        "proteins": 27.0,
+        "fats": 18.6,
+        "carbohydrates": 5.9,
+        "kilocalories": 299.0
+    },
+    {
+        "food name": "roasted potatoes",
+        "proteins": 2.5,
+        "fats": 4.5,
+        "carbohydrates": 25.9,
+        "kilocalories": 154.1
+    },
+    {
+        "food name": "cauliflower",
+        "proteins": 1.83,
+        "fats": 0.45,
+        "carbohydrates": 4.08,
+        "kilocalories": 27.69
+    },
+    {
+        "food name": "salmon",
+        "proteins": 20.0,
+        "fats": 13.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 197.0
+    },
+    {
+        "food name": "cornmeal porridge",
+        "proteins": 5.0,
+        "fats": 6.0,
+        "carbohydrates": 32.0,
+        "kilocalories": 202.0
+    },
+    {
+        "food name": "hot dog",
+        "proteins": 10.0,
+        "fats": 14.5,
+        "carbohydrates": 18.0,
+        "kilocalories": 242.5
+    },
+    {
+        "food name": "sugar",
+        "proteins": 0.0,
+        "fats": 0.0,
+        "carbohydrates": 99.0,
+        "kilocalories": 396.0
+    },
+    {
+        "food name": "orange",
+        "proteins": 0.9,
+        "fats": 0.1,
+        "carbohydrates": 12.0,
+        "kilocalories": 52.5
+    },
+    {
+        "food name": "mandarin",
+        "proteins": 0.8,
+        "fats": 0.3,
+        "carbohydrates": 13.3,
+        "kilocalories": 59.1
+    },
+    {
+        "food name": "bolognese",
+        "proteins": 8.8,
+        "fats": 8.3,
+        "carbohydrates": 5.3,
+        "kilocalories": 131.1
+    },
+    {
+        "food name": "baked beans",
+        "proteins": 5.8,
+        "fats": 5.3,
+        "carbohydrates": 21.3,
+        "kilocalories": 156.1
+    },
+    {
+        "food name": "tuna canned",
+        "proteins": 25.4,
+        "fats": 3.0,
+        "carbohydrates": 0.7,
+        "kilocalories": 131.4
+    },
+    {
+        "food name": "boiled potatoes",
+        "proteins": 2.0,
+        "fats": 0.0,
+        "carbohydrates": 20.0,
+        "kilocalories": 88.0
+    },
+    {
+        "food name": "cheese curado",
+        "proteins": 28.5,
+        "fats": 32.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 402.0
+    },
+    {
+        "food name": "beef tongue",
+        "proteins": 14.9,
+        "fats": 17.0,
+        "carbohydrates": 3.7,
+        "kilocalories": 227.4
+    },
+    {
+        "food name": "nectarine",
+        "proteins": 1.0,
+        "fats": 0.0,
+        "carbohydrates": 10.0,
+        "kilocalories": 44.0
+    },
+    {
+        "food name": "octopus",
+        "proteins": 29.2,
+        "fats": 2.1,
+        "carbohydrates": 4.0,
+        "kilocalories": 151.7
+    },
+    {
+        "food name": "bologna sausage",
+        "proteins": 15.2,
+        "fats": 20.0,
+        "carbohydrates": 0.7,
+        "kilocalories": 243.6
+    },
+    {
+        "food name": "eclair",
+        "proteins": 6.2,
+        "fats": 18.0,
+        "carbohydrates": 24.7,
+        "kilocalories": 285.6
+    },
+    {
+        "food name": "bananabread",
+        "proteins": 7.0,
+        "fats": 17.0,
+        "carbohydrates": 52.7,
+        "kilocalories": 391.8
+    },
+    {
+        "food name": "cherry",
+        "proteins": 0.0,
+        "fats": 0.0,
+        "carbohydrates": 16.7,
+        "kilocalories": 66.8
+    },
+    {
+        "food name": "pineapple",
+        "proteins": 0.5,
+        "fats": 0.1,
+        "carbohydrates": 13.0,
+        "kilocalories": 54.9
+    },
+    {
+        "food name": "milksugar",
+        "proteins": 8.0,
+        "fats": 8.5,
+        "carbohydrates": 56.0,
+        "kilocalories": 332.5
+    },
+    {
+        "food name": "watermelon",
+        "proteins": 0.6,
+        "fats": 0.1,
+        "carbohydrates": 7.5,
+        "kilocalories": 33.3
+    },
+    {
+        "food name": "Cheese pastry puffs",
+        "proteins": 9.3,
+        "fats": 19.54,
+        "carbohydrates": 13.4,
+        "kilocalories": 265.0
+    },
+    {
+        "food name": "Popcorn cake",
+        "proteins": 9.7,
+        "fats": 3.1,
+        "carbohydrates": 80.1,
+        "kilocalories": 384.0
+    },
+    {
+        "food name": "Rice croquette",
+        "proteins": 3.4,
+        "fats": 6.58,
+        "carbohydrates": 19.99,
+        "kilocalories": 153.0
+    },
+    {
+        "food name": "Potato pancake",
+        "proteins": 4.47,
+        "fats": 10.8,
+        "carbohydrates": 20.64,
+        "kilocalories": 196.0
+    },
+    {
+        "food name": "Beef goulash",
+        "proteins": 13.7,
+        "fats": 3.79,
+        "carbohydrates": 2.93,
+        "kilocalories": 104.0
+    },
+    {
+        "food name": "Potato patty",
+        "proteins": 3.89,
+        "fats": 11.32,
+        "carbohydrates": 13.49,
+        "kilocalories": 171.0
+    },
+    {
+        "food name": "Soybean curd",
+        "proteins": 7.17,
+        "fats": 3.69,
+        "carbohydrates": 1.18,
+        "kilocalories": 61.0
+    },
+    {
+        "food name": "Biscuit with fruit",
+        "proteins": 6.7,
+        "fats": 17.05,
+        "carbohydrates": 46.47,
+        "kilocalories": 363.0
+    },
+    {
+        "food name": "Goat",
+        "proteins": 26.88,
+        "fats": 3.01,
+        "carbohydrates": 0.0,
+        "kilocalories": 142.0
+    },
+    {
+        "food name": "Baby Toddler beef",
+        "proteins": 12.03,
+        "fats": 2.52,
+        "carbohydrates": 2.43,
+        "kilocalories": 81.0
+    },
+    {
+        "food name": "Mock chicken legs",
+        "proteins": 21.54,
+        "fats": 13.59,
+        "carbohydrates": 8.04,
+        "kilocalories": 242.0
+    },
+    {
+        "food name": "Cheese souffle",
+        "proteins": 9.43,
+        "fats": 16.01,
+        "carbohydrates": 6.38,
+        "kilocalories": 207.0
+    },
+    {
+        "food name": "Cheese ball",
+        "proteins": 18.08,
+        "fats": 38.07,
+        "carbohydrates": 5.57,
+        "kilocalories": 427.0
+    },
+    {
+        "food name": "Fish curry",
+        "proteins": 4.93,
+        "fats": 5.38,
+        "carbohydrates": 6.58,
+        "kilocalories": 92.0
+    },
+    {
+        "food name": "Hunan beef",
+        "proteins": 7.08,
+        "fats": 5.3,
+        "carbohydrates": 7.29,
+        "kilocalories": 105.0
+    },
+    {
+        "food name": "Egg burrito",
+        "proteins": 10.94,
+        "fats": 13.75,
+        "carbohydrates": 20.05,
+        "kilocalories": 249.0
+    },
+    {
+        "food name": "Banana nectar",
+        "proteins": 0.26,
+        "fats": 0.13,
+        "carbohydrates": 18.01,
+        "kilocalories": 74.0
+    },
+    {
+        "food name": "Fried mushrooms",
+        "proteins": 4.63,
+        "fats": 12.91,
+        "carbohydrates": 21.9,
+        "kilocalories": 222.0
+    },
+    {
+        "food name": "Pepperpot soup",
+        "proteins": 3.48,
+        "fats": 2.5,
+        "carbohydrates": 3.11,
+        "kilocalories": 48.0
+    },
+    {
+        "food name": "Biryani with vegetables",
+        "proteins": 1.93,
+        "fats": 3.2,
+        "carbohydrates": 17.88,
+        "kilocalories": 109.0
+    },
+    {
+        "food name": "Pork and beans",
+        "proteins": 4.52,
+        "fats": 0.89,
+        "carbohydrates": 21.57,
+        "kilocalories": 105.0
+    },
+    {
+        "food name": "Fried green tomatoes",
+        "proteins": 3.68,
+        "fats": 12.84,
+        "carbohydrates": 21.78,
+        "kilocalories": 216.0
+    },
+    {
+        "food name": "Beef with gravy",
+        "proteins": 21.56,
+        "fats": 7.05,
+        "carbohydrates": 1.58,
+        "kilocalories": 156.0
+    },
+    {
+        "food name": "Fish chowder",
+        "proteins": 8.07,
+        "fats": 6.23,
+        "carbohydrates": 6.1,
+        "kilocalories": 113.0
+    },
+    {
+        "food name": "Kung Pao pork",
+        "proteins": 17.3,
+        "fats": 14.89,
+        "carbohydrates": 4.74,
+        "kilocalories": 222.0
+    },
+    {
+        "food name": "Beef burgundy",
+        "proteins": 18.48,
+        "fats": 6.0,
+        "carbohydrates": 4.2,
+        "kilocalories": 148.0
+    },
+    {
+        "food name": "Head cheese",
+        "proteins": 13.83,
+        "fats": 10.9,
+        "carbohydrates": 0.0,
+        "kilocalories": 157.0
+    },
+    {
+        "food name": "Green bean casserole",
+        "proteins": 1.88,
+        "fats": 2.18,
+        "carbohydrates": 6.8,
+        "kilocalories": 50.0
+    },
+    {
+        "food name": "Eggplant dip",
+        "proteins": 4.26,
+        "fats": 13.25,
+        "carbohydrates": 9.56,
+        "kilocalories": 162.0
+    },
+    {
+        "food name": "Barbecue chicken",
+        "proteins": 19.0,
+        "fats": 4.64,
+        "carbohydrates": 12.23,
+        "kilocalories": 167.0
+    },
+    {
+        "food name": "Vegetable chips",
+        "proteins": 4.72,
+        "fats": 26.56,
+        "carbohydrates": 59.2,
+        "kilocalories": 495.0
+    },
+    {
+        "food name": "Wheat bran",
+        "proteins": 15.55,
+        "fats": 4.25,
+        "carbohydrates": 64.51,
+        "kilocalories": 216.0
+    },
+    {
+        "food name": "Egg white sandwich",
+        "proteins": 9.41,
+        "fats": 3.62,
+        "carbohydrates": 24.1,
+        "kilocalories": 166.0
+    },
+    {
+        "food name": "Baby Toddler chicken",
+        "proteins": 13.7,
+        "fats": 7.9,
+        "carbohydrates": 0.1,
+        "kilocalories": 130.0
+    },
+    {
+        "food name": "Corned beef patty",
+        "proteins": 8.73,
+        "fats": 10.24,
+        "carbohydrates": 9.27,
+        "kilocalories": 164.0
+    },
+    {
+        "food name": "Bean cake",
+        "proteins": 5.8,
+        "fats": 21.41,
+        "carbohydrates": 49.88,
+        "kilocalories": 414.0
+    },
+    {
+        "food name": "Cheese fondue",
+        "proteins": 19.32,
+        "fats": 21.2,
+        "carbohydrates": 1.95,
+        "kilocalories": 276.0
+    },
+    {
+        "food name": "Fried eggplant",
+        "proteins": 3.66,
+        "fats": 12.82,
+        "carbohydrates": 22.33,
+        "kilocalories": 218.0
+    },
+    {
+        "food name": "Fried cauliflower",
+        "proteins": 4.02,
+        "fats": 12.86,
+        "carbohydrates": 21.9,
+        "kilocalories": 218.0
+    },
+    {
+        "food name": "Celery juice",
+        "proteins": 0.69,
+        "fats": 0.17,
+        "carbohydrates": 2.97,
+        "kilocalories": 14.0
+    },
+    {
+        "food name": "Pork sausage",
+        "proteins": 18.53,
+        "fats": 27.25,
+        "carbohydrates": 1.42,
+        "kilocalories": 325.0
+    },
+    {
+        "food name": "Corn dog",
+        "proteins": 8.57,
+        "fats": 12.02,
+        "carbohydrates": 26.96,
+        "kilocalories": 250.0
+    },
+    {
+        "food name": "Corn oil",
+        "proteins": 0.0,
+        "fats": 100.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 900.0
+    },
+    {
+        "food name": "Mixed vegetable juice",
+        "proteins": 0.82,
+        "fats": 0.16,
+        "carbohydrates": 6.12,
+        "kilocalories": 27.0
+    },
+    {
+        "food name": "Eggnog",
+        "proteins": 4.55,
+        "fats": 4.19,
+        "carbohydrates": 8.05,
+        "kilocalories": 88.0
+    },
+    {
+        "food name": "Beef stroganoff",
+        "proteins": 9.93,
+        "fats": 9.61,
+        "carbohydrates": 6.02,
+        "kilocalories": 150.0
+    },
+    {
+        "food name": "Apple cider",
+        "proteins": 0.1,
+        "fats": 0.13,
+        "carbohydrates": 11.3,
+        "kilocalories": 46.0
+    },
+    {
+        "food name": "Barley",
+        "proteins": 2.2,
+        "fats": 2.74,
+        "carbohydrates": 27.23,
+        "kilocalories": 139.0
+    },
+    {
+        "food name": "Banana chips",
+        "proteins": 2.3,
+        "fats": 33.6,
+        "carbohydrates": 58.4,
+        "kilocalories": 519.0
+    },
+    {
+        "food name": "Pork jerky",
+        "proteins": 33.2,
+        "fats": 25.6,
+        "carbohydrates": 11.0,
+        "kilocalories": 410.0
+    },
+    {
+        "food name": "Passion fruit nectar",
+        "proteins": 0.16,
+        "fats": 0.06,
+        "carbohydrates": 17.39,
+        "kilocalories": 69.0
+    },
+    {
+        "food name": "Cheese dip",
+        "proteins": 3.3,
+        "fats": 13.07,
+        "carbohydrates": 7.76,
+        "kilocalories": 162.0
+    },
+    {
+        "food name": "Pork hash",
+        "proteins": 12.95,
+        "fats": 13.65,
+        "carbohydrates": 1.93,
+        "kilocalories": 185.0
+    },
+    {
+        "food name": "Fruit flavored drink",
+        "proteins": 0.0,
+        "fats": 0.0,
+        "carbohydrates": 16.03,
+        "kilocalories": 64.0
+    },
+    {
+        "food name": "Pear nectar",
+        "proteins": 0.11,
+        "fats": 0.01,
+        "carbohydrates": 15.76,
+        "kilocalories": 60.0
+    },
+    {
+        "food name": "Cheeseburger slider",
+        "proteins": 18.12,
+        "fats": 16.47,
+        "carbohydrates": 17.88,
+        "kilocalories": 297.0
+    },
+    {
+        "food name": "Egg drop soup",
+        "proteins": 1.16,
+        "fats": 0.61,
+        "carbohydrates": 4.29,
+        "kilocalories": 27.0
+    },
+    {
+        "food name": "Rice dressing",
+        "proteins": 2.0,
+        "fats": 3.3,
+        "carbohydrates": 17.68,
+        "kilocalories": 110.0
+    },
+    {
+        "food name": "Peach nectar",
+        "proteins": 0.1,
+        "fats": 0.57,
+        "carbohydrates": 11.61,
+        "kilocalories": 49.0
+    },
+    {
+        "food name": "Sweetbreads",
+        "proteins": 22.49,
+        "fats": 3.08,
+        "carbohydrates": 0.0,
+        "kilocalories": 124.0
+    },
+    {
+        "food name": "Soy milk",
+        "proteins": 3.41,
+        "fats": 2.05,
+        "carbohydrates": 5.22,
+        "kilocalories": 53.0
+    },
+    {
+        "food name": "Beef wellington",
+        "proteins": 19.16,
+        "fats": 27.43,
+        "carbohydrates": 10.25,
+        "kilocalories": 368.0
+    },
+    {
+        "food name": "Sweet potato paste",
+        "proteins": 0.41,
+        "fats": 0.27,
+        "carbohydrates": 75.04,
+        "kilocalories": 304.0
+    },
+    {
+        "food name": "Chicken salad spread",
+        "proteins": 11.64,
+        "fats": 13.52,
+        "carbohydrates": 7.41,
+        "kilocalories": 200.0
+    },
+    {
+        "food name": "Chicken kiev",
+        "proteins": 21.31,
+        "fats": 19.21,
+        "carbohydrates": 5.45,
+        "kilocalories": 280.0
+    },
+    {
+        "food name": "Chicken cornbread",
+        "proteins": 13.78,
+        "fats": 8.21,
+        "carbohydrates": 9.38,
+        "kilocalories": 167.0
+    },
+    {
+        "food name": "Beef sausage",
+        "proteins": 13.3,
+        "fats": 28.7,
+        "carbohydrates": 3.37,
+        "kilocalories": 341.0
+    },
+    {
+        "food name": "Baby Toddler turkey",
+        "proteins": 11.5,
+        "fats": 6.2,
+        "carbohydrates": 1.4,
+        "kilocalories": 111.0
+    },
+    {
+        "food name": "Vegetable smoothie",
+        "proteins": 2.75,
+        "fats": 6.63,
+        "carbohydrates": 5.84,
+        "kilocalories": 89.0
+    },
+    {
+        "food name": "Sesame chicken",
+        "proteins": 14.33,
+        "fats": 14.25,
+        "carbohydrates": 26.88,
+        "kilocalories": 293.0
+    },
+    {
+        "food name": "Wheat germ oil",
+        "proteins": 0.0,
+        "fats": 100.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 884.0
+    },
+    {
+        "food name": "Sweet potato tots",
+        "proteins": 2.26,
+        "fats": 9.35,
+        "carbohydrates": 37.3,
+        "kilocalories": 191.0
+    },
+    {
+        "food name": "Gefilte fish",
+        "proteins": 12.46,
+        "fats": 2.6,
+        "carbohydrates": 8.74,
+        "kilocalories": 111.0
+    },
+    {
+        "food name": "Corn syrup",
+        "proteins": 0.0,
+        "fats": 0.2,
+        "carbohydrates": 76.79,
+        "kilocalories": 283.0
+    },
+    {
+        "food name": "Spinach souffle",
+        "proteins": 5.72,
+        "fats": 8.64,
+        "carbohydrates": 7.13,
+        "kilocalories": 128.0
+    },
+    {
+        "food name": "Black bean sauce",
+        "proteins": 6.28,
+        "fats": 8.45,
+        "carbohydrates": 17.36,
+        "kilocalories": 168.0
+    },
+    {
+        "food name": "Beef curry",
+        "proteins": 7.56,
+        "fats": 6.53,
+        "carbohydrates": 6.46,
+        "kilocalories": 112.0
+    },
+    {
+        "food name": "Wheat germ",
+        "proteins": 29.1,
+        "fats": 10.7,
+        "carbohydrates": 49.6,
+        "kilocalories": 382.0
+    },
+    {
+        "food name": "Corn beverage",
+        "proteins": 0.84,
+        "fats": 0.21,
+        "carbohydrates": 9.4,
+        "kilocalories": 44.0
+    },
+    {
+        "food name": "Turkey sandwich wrap",
+        "proteins": 12.82,
+        "fats": 9.47,
+        "carbohydrates": 23.27,
+        "kilocalories": 233.0
+    },
+    {
+        "food name": "Cornbread stuffing",
+        "proteins": 2.9,
+        "fats": 8.8,
+        "carbohydrates": 21.9,
+        "kilocalories": 179.0
+    },
+    {
+        "food name": "Rice cake",
+        "proteins": 7.1,
+        "fats": 4.3,
+        "carbohydrates": 81.1,
+        "kilocalories": 392.0
+    },
+    {
+        "food name": "Pepper steak",
+        "proteins": 11.88,
+        "fats": 9.12,
+        "carbohydrates": 4.34,
+        "kilocalories": 145.0
+    },
+    {
+        "food name": "Chocolate milk drink",
+        "proteins": 0.64,
+        "fats": 0.4,
+        "carbohydrates": 10.68,
+        "kilocalories": 49.0
+    },
+    {
+        "food name": "Rice pilaf",
+        "proteins": 3.29,
+        "fats": 3.03,
+        "carbohydrates": 24.08,
+        "kilocalories": 137.0
+    },
+    {
+        "food name": "Apple pie filling",
+        "proteins": 0.1,
+        "fats": 0.1,
+        "carbohydrates": 26.1,
+        "kilocalories": 100.0
+    },
+    {
+        "food name": "Beef and broccoli",
+        "proteins": 10.43,
+        "fats": 10.63,
+        "carbohydrates": 5.09,
+        "kilocalories": 160.0
+    },
+    {
+        "food name": "Turkey with gravy",
+        "proteins": 20.46,
+        "fats": 3.46,
+        "carbohydrates": 1.58,
+        "kilocalories": 125.0
+    },
+    {
+        "food name": "Bread stuffing",
+        "proteins": 3.14,
+        "fats": 8.51,
+        "carbohydrates": 21.71,
+        "kilocalories": 177.0
+    },
+    {
+        "food name": "Bean chips",
+        "proteins": 14.6,
+        "fats": 21.58,
+        "carbohydrates": 53.12,
+        "kilocalories": 448.0
+    },
+    {
+        "food name": "Chicken with gravy",
+        "proteins": 18.88,
+        "fats": 5.21,
+        "carbohydrates": 1.58,
+        "kilocalories": 129.0
+    },
+    {
+        "food name": "Fried broccoli",
+        "proteins": 4.28,
+        "fats": 12.88,
+        "carbohydrates": 22.41,
+        "kilocalories": 223.0
+    },
+    {
+        "food name": "Banana pudding",
+        "proteins": 2.57,
+        "fats": 4.26,
+        "carbohydrates": 28.0,
+        "kilocalories": 160.0
+    },
+    {
+        "food name": "Corned beef hash",
+        "proteins": 8.73,
+        "fats": 10.24,
+        "carbohydrates": 9.27,
+        "kilocalories": 164.0
+    },
+    {
+        "food name": "Baked beans",
+        "proteins": 4.52,
+        "fats": 0.89,
+        "carbohydrates": 21.57,
+        "kilocalories": 105.0
+    },
+    {
+        "food name": "Hot pepper sauce",
+        "proteins": 1.29,
+        "fats": 0.76,
+        "carbohydrates": 0.8,
+        "kilocalories": 12.0
+    },
+    {
+        "food name": "Tomato chili sauce",
+        "proteins": 2.5,
+        "fats": 0.3,
+        "carbohydrates": 19.79,
+        "kilocalories": 92.0
+    },
+    {
+        "food name": "Spoonbread",
+        "proteins": 6.68,
+        "fats": 7.06,
+        "carbohydrates": 18.55,
+        "kilocalories": 166.0
+    },
+    {
+        "food name": "Fried onion rings",
+        "proteins": 4.19,
+        "fats": 19.82,
+        "carbohydrates": 39.94,
+        "kilocalories": 352.0
+    },
+    {
+        "food name": "Vegetable tempura",
+        "proteins": 3.81,
+        "fats": 15.81,
+        "carbohydrates": 20.42,
+        "kilocalories": 238.0
+    },
+    {
+        "food name": "Onion flavored rings",
+        "proteins": 7.7,
+        "fats": 22.6,
+        "carbohydrates": 65.1,
+        "kilocalories": 499.0
+    },
+    {
+        "food name": "Imitation cheese",
+        "proteins": 25.0,
+        "fats": 32.0,
+        "carbohydrates": 1.0,
+        "kilocalories": 390.0
+    },
+    {
+        "food name": "Cheese sauce",
+        "proteins": 3.3,
+        "fats": 13.07,
+        "carbohydrates": 7.76,
+        "kilocalories": 162.0
+    },
+    {
+        "food name": "Tomato juice cocktail",
+        "proteins": 0.93,
+        "fats": 0.31,
+        "carbohydrates": 3.87,
+        "kilocalories": 22.0
+    },
+    {
+        "food name": "Vegetable curry",
+        "proteins": 1.59,
+        "fats": 5.23,
+        "carbohydrates": 8.72,
+        "kilocalories": 84.0
+    },
+    {
+        "food name": "Frozen yogurt sandwich",
+        "proteins": 3.9,
+        "fats": 6.25,
+        "carbohydrates": 34.38,
+        "kilocalories": 204.0
+    },
+    {
+        "food name": "Pork skin rinds",
+        "proteins": 61.3,
+        "fats": 31.3,
+        "carbohydrates": 0.0,
+        "kilocalories": 544.0
+    },
+    {
+        "food name": "Orange chicken",
+        "proteins": 14.46,
+        "fats": 12.68,
+        "carbohydrates": 22.46,
+        "kilocalories": 262.0
+    },
+    {
+        "food name": "Refried beans",
+        "proteins": 4.98,
+        "fats": 2.01,
+        "carbohydrates": 13.55,
+        "kilocalories": 90.0
+    },
+    {
+        "food name": "Stuffed jalapeno pepper",
+        "proteins": 8.93,
+        "fats": 15.78,
+        "carbohydrates": 16.42,
+        "kilocalories": 240.0
+    },
+    {
+        "food name": "Banana split",
+        "proteins": 2.44,
+        "fats": 6.89,
+        "carbohydrates": 32.57,
+        "kilocalories": 199.0
+    },
+    {
+        "food name": "Potato chowder",
+        "proteins": 3.91,
+        "fats": 4.69,
+        "carbohydrates": 8.57,
+        "kilocalories": 91.0
+    },
+    {
+        "food name": "Flavored rice mixture",
+        "proteins": 1.87,
+        "fats": 4.26,
+        "carbohydrates": 19.83,
+        "kilocalories": 127.0
+    },
+    {
+        "food name": "Coconut milk",
+        "proteins": 0.21,
+        "fats": 2.08,
+        "carbohydrates": 2.92,
+        "kilocalories": 31.0
+    },
+    {
+        "food name": "Fish wrap sandwich",
+        "proteins": 14.77,
+        "fats": 12.5,
+        "carbohydrates": 22.59,
+        "kilocalories": 263.0
+    },
+    {
+        "food name": "Beef salad",
+        "proteins": 17.9,
+        "fats": 19.32,
+        "carbohydrates": 2.82,
+        "kilocalories": 260.0
+    },
+    {
+        "food name": "Guacamole with tomatoes",
+        "proteins": 1.87,
+        "fats": 13.09,
+        "carbohydrates": 8.09,
+        "kilocalories": 145.0
+    },
+    {
+        "food name": "Szechuan beef",
+        "proteins": 7.08,
+        "fats": 5.3,
+        "carbohydrates": 7.29,
+        "kilocalories": 105.0
+    },
+    {
+        "food name": "Spinach soup",
+        "proteins": 2.94,
+        "fats": 1.09,
+        "carbohydrates": 2.52,
+        "kilocalories": 32.0
+    },
+    {
+        "food name": "Biryani with chicken",
+        "proteins": 7.15,
+        "fats": 2.38,
+        "carbohydrates": 13.55,
+        "kilocalories": 104.0
+    },
+    {
+        "food name": "Yogurt dressing",
+        "proteins": 3.45,
+        "fats": 18.27,
+        "carbohydrates": 11.8,
+        "kilocalories": 220.0
+    },
+    {
+        "food name": "Pork sandwich",
+        "proteins": 17.73,
+        "fats": 5.47,
+        "carbohydrates": 25.45,
+        "kilocalories": 226.0
+    },
+    {
+        "food name": "Fruit juice drink",
+        "proteins": 0.0,
+        "fats": 0.0,
+        "carbohydrates": 2.5,
+        "kilocalories": 10.0
+    },
+    {
+        "food name": "Soybean curd cheese",
+        "proteins": 12.5,
+        "fats": 8.1,
+        "carbohydrates": 6.9,
+        "kilocalories": 151.0
+    },
+    {
+        "food name": "Almond chicken",
+        "proteins": 16.08,
+        "fats": 13.29,
+        "carbohydrates": 4.64,
+        "kilocalories": 198.0
+    },
+    {
+        "food name": "Buckwheat groats",
+        "proteins": 3.22,
+        "fats": 3.34,
+        "carbohydrates": 18.99,
+        "kilocalories": 112.0
+    },
+    {
+        "food name": "Fish sauce",
+        "proteins": 5.06,
+        "fats": 0.01,
+        "carbohydrates": 3.64,
+        "kilocalories": 35.0
+    },
+    {
+        "food name": "Tomato aspic",
+        "proteins": 2.58,
+        "fats": 0.26,
+        "carbohydrates": 5.32,
+        "kilocalories": 33.0
+    },
+    {
+        "food name": "Kung pao chicken",
+        "proteins": 9.76,
+        "fats": 6.98,
+        "carbohydrates": 6.87,
+        "kilocalories": 129.0
+    },
+    {
+        "food name": "Gumbo with rice",
+        "proteins": 8.16,
+        "fats": 3.43,
+        "carbohydrates": 6.55,
+        "kilocalories": 89.0
+    },
+    {
+        "food name": "Corn nuts",
+        "proteins": 8.5,
+        "fats": 15.64,
+        "carbohydrates": 71.86,
+        "kilocalories": 446.0
+    },
+    {
+        "food name": "Chicken feet",
+        "proteins": 19.4,
+        "fats": 14.6,
+        "carbohydrates": 0.2,
+        "kilocalories": 215.0
+    },
+    {
+        "food name": "General Tso chicken",
+        "proteins": 12.9,
+        "fats": 16.36,
+        "carbohydrates": 23.99,
+        "kilocalories": 295.0
+    },
+    {
+        "food name": "Fruit butter",
+        "proteins": 0.39,
+        "fats": 0.3,
+        "carbohydrates": 42.47,
+        "kilocalories": 173.0
+    },
+    {
+        "food name": "Broccoli slaw salad",
+        "proteins": 1.97,
+        "fats": 8.1,
+        "carbohydrates": 10.35,
+        "kilocalories": 122.0
+    },
+    {
+        "food name": "Chicken curry",
+        "proteins": 6.47,
+        "fats": 6.45,
+        "carbohydrates": 6.47,
+        "kilocalories": 106.0
+    },
+    {
+        "food name": "Soybean oil",
+        "proteins": 0.0,
+        "fats": 100.0,
+        "carbohydrates": 0.0,
+        "kilocalories": 900.0
+    },
+    {
+        "food name": "Rice milk",
+        "proteins": 0.28,
+        "fats": 0.97,
+        "carbohydrates": 9.17,
+        "kilocalories": 47.0
+    },
+    {
+        "food name": "Kung Pao beef",
+        "proteins": 18.34,
+        "fats": 14.57,
+        "carbohydrates": 4.74,
+        "kilocalories": 219.0
+    },
+    {
+        "food name": "Fried green beans",
+        "proteins": 3.98,
+        "fats": 12.84,
+        "carbohydrates": 22.69,
+        "kilocalories": 220.0
+    },
+    {
+        "food name": "Vegetable sandwich wrap",
+        "proteins": 5.48,
+        "fats": 6.61,
+        "carbohydrates": 19.62,
+        "kilocalories": 160.0
+    },
+    {
+        "food name": "Dirty rice",
+        "proteins": 5.13,
+        "fats": 2.25,
+        "carbohydrates": 17.25,
+        "kilocalories": 112.0
+    },
+    {
+        "food name": "Stewed potatoes",
+        "proteins": 1.84,
+        "fats": 3.22,
+        "carbohydrates": 19.91,
+        "kilocalories": 114.0
+    },
+    {
+        "food name": "Rice paper",
+        "proteins": 5.91,
+        "fats": 1.11,
+        "carbohydrates": 72.26,
+        "kilocalories": 323.0
+    },
+    {
+        "food name": "Beans and franks",
+        "proteins": 6.74,
+        "fats": 5.22,
+        "carbohydrates": 17.29,
+        "kilocalories": 138.0
+    },
+    {
+        "food name": "Sweet potato chips",
+        "proteins": 2.92,
+        "fats": 32.19,
+        "carbohydrates": 56.54,
+        "kilocalories": 529.0
+    },
+    {
+        "food name": "Cornmeal beverage",
+        "proteins": 1.69,
+        "fats": 1.54,
+        "carbohydrates": 16.28,
+        "kilocalories": 86.0
+    },
+    {
+        "food name": "Chicken skin",
+        "proteins": 20.19,
+        "fats": 40.34,
+        "carbohydrates": 0.0,
+        "kilocalories": 450.0
+    },
+    {
+        "food name": "Black bean salad",
+        "proteins": 3.08,
+        "fats": 3.85,
+        "carbohydrates": 12.61,
+        "kilocalories": 94.0
+    },
+    {
+        "food name": "Dragon fruit",
+        "proteins": 0.36,
+        "fats": 0.14,
+        "carbohydrates": 15.23,
+        "kilocalories": 57.0
+    },
+    {
+        "food name": "Beef jerky",
+        "proteins": 33.2,
+        "fats": 25.6,
+        "carbohydrates": 11.0,
+        "kilocalories": 410.0
+    },
+    {
+        "food name": "Cream of rice",
+        "proteins": 1.17,
+        "fats": 0.09,
+        "carbohydrates": 15.28,
+        "kilocalories": 69.0
+    },
+    {
+        "food name": "Rice with raisins",
+        "proteins": 2.65,
+        "fats": 2.58,
+        "carbohydrates": 32.13,
+        "kilocalories": 162.0
+    },
+    {
+        "food name": "Tuna salad with cheese",
+        "proteins": 11.37,
+        "fats": 17.58,
+        "carbohydrates": 2.78,
+        "kilocalories": 214.0
+    },
+    {
+        "food name": "Egg sandwich on griddle/pancake",
+        "proteins": 8.32,
+        "fats": 13.21,
+        "carbohydrates": 22.81,
+        "kilocalories": 242.0
+    },
+    {
+        "food name": "Macaroni or noodles with cheese and chicken or turkey",
+        "proteins": 12.53,
+        "fats": 7.61,
+        "carbohydrates": 14.82,
+        "kilocalories": 178.0
+    },
+    {
+        "food name": "Lentil curry with rice",
+        "proteins": 3.27,
+        "fats": 3.48,
+        "carbohydrates": 18.57,
+        "kilocalories": 118.0
+    },
+    {
+        "food name": "Macaroni or noodles with cheese and frankfurters or hot dogs",
+        "proteins": 6.17,
+        "fats": 12.25,
+        "carbohydrates": 18.71,
+        "kilocalories": 209.0
+    },
+    {
+        "food name": "Milk shake with malt",
+        "proteins": 3.76,
+        "fats": 6.11,
+        "carbohydrates": 13.64,
+        "kilocalories": 125.0
+    },
+    {
+        "food name": "Stir fried beef and vegetables in soy sauce",
+        "proteins": 10.8,
+        "fats": 3.74,
+        "carbohydrates": 4.44,
+        "kilocalories": 95.0
+    },
+    {
+        "food name": "Chicken or turkey salad with egg",
+        "proteins": 13.85,
+        "fats": 18.06,
+        "carbohydrates": 2.66,
+        "kilocalories": 228.0
+    },
+    {
+        "food name": "Cheese as ingredient in sandwiches",
+        "proteins": 20.7,
+        "fats": 28.91,
+        "carbohydrates": 4.85,
+        "kilocalories": 363.0
+    },
+    {
+        "food name": "Fish and rice with tomato-based sauce",
+        "proteins": 5.41,
+        "fats": 5.12,
+        "carbohydrates": 16.53,
+        "kilocalories": 135.0
+    },
+    {
+        "food name": "Sweet and sour pork with rice",
+        "proteins": 9.81,
+        "fats": 8.82,
+        "carbohydrates": 16.39,
+        "kilocalories": 186.0
+    },
+    {
+        "food name": "Fruit juice drink (Sunny D)",
+        "proteins": 0.13,
+        "fats": 0.0,
+        "carbohydrates": 13.16,
+        "kilocalories": 54.0
+    },
+    {
+        "food name": "Shrimp and noodles with cheese sauce",
+        "proteins": 8.18,
+        "fats": 5.37,
+        "carbohydrates": 13.45,
+        "kilocalories": 136.0
+    },
+    {
+        "food name": "Stuffed grape leaves with lamb and rice",
+        "proteins": 8.17,
+        "fats": 21.52,
+        "carbohydrates": 11.89,
+        "kilocalories": 271.0
+    },
+    {
+        "food name": "Beef and rice with mushroom sauce",
+        "proteins": 6.25,
+        "fats": 5.18,
+        "carbohydrates": 15.53,
+        "kilocalories": 135.0
+    },
+    {
+        "food name": "Cereal or granola bar (KIND Fruit and Nut Bar)",
+        "proteins": 13.79,
+        "fats": 31.88,
+        "carbohydrates": 44.27,
+        "kilocalories": 486.0
+    },
+    {
+        "food name": "Egg salad sandwich on wheat",
+        "proteins": 10.64,
+        "fats": 16.75,
+        "carbohydrates": 15.81,
+        "kilocalories": 259.0
+    },
+    {
+        "food name": "Beef and noodles with tomato-based sauce",
+        "proteins": 8.74,
+        "fats": 3.93,
+        "carbohydrates": 10.67,
+        "kilocalories": 115.0
+    },
+    {
+        "food name": "Pork and onions with soy-based sauce",
+        "proteins": 11.06,
+        "fats": 9.14,
+        "carbohydrates": 5.43,
+        "kilocalories": 149.0
+    },
+    {
+        "food name": "Spaghetti sauce with meat and added vegetables",
+        "proteins": 6.03,
+        "fats": 4.14,
+        "carbohydrates": 6.03,
+        "kilocalories": 86.0
+    },
+    {
+        "food name": "Ham salad sandwich on wheat",
+        "proteins": 12.67,
+        "fats": 13.39,
+        "carbohydrates": 16.98,
+        "kilocalories": 241.0
+    },
+    {
+        "food name": "Macaroni or noodles with cheese and tomato",
+        "proteins": 3.94,
+        "fats": 6.53,
+        "carbohydrates": 18.72,
+        "kilocalories": 148.0
+    },
+    {
+        "food name": "Quarter Pounder with cheese (McDonalds)",
+        "proteins": 15.21,
+        "fats": 14.4,
+        "carbohydrates": 19.72,
+        "kilocalories": 269.0
+    },
+    {
+        "food name": "Cheese and Queso as ingredient",
+        "proteins": 22.64,
+        "fats": 29.92,
+        "carbohydrates": 2.15,
+        "kilocalories": 368.0
+    },
+    {
+        "food name": "Chicken or turkey divan",
+        "proteins": 15.51,
+        "fats": 7.26,
+        "carbohydrates": 4.01,
+        "kilocalories": 140.0
+    },
+    {
+        "food name": "Alfredo sauce with meat and added vegetables",
+        "proteins": 6.63,
+        "fats": 12.64,
+        "carbohydrates": 1.95,
+        "kilocalories": 147.0
+    },
+    {
+        "food name": "Pad Thai with chicken",
+        "proteins": 8.13,
+        "fats": 7.5,
+        "carbohydrates": 14.36,
+        "kilocalories": 154.0
+    },
+    {
+        "food name": "Corned beef sandwich on wheat",
+        "proteins": 14.67,
+        "fats": 11.22,
+        "carbohydrates": 23.72,
+        "kilocalories": 257.0
+    },
+    {
+        "food name": "Chicken or turkey and noodles with gravy",
+        "proteins": 6.99,
+        "fats": 5.67,
+        "carbohydrates": 15.23,
+        "kilocalories": 140.0
+    },
+    {
+        "food name": "Egg sandwich on bagel",
+        "proteins": 12.0,
+        "fats": 8.48,
+        "carbohydrates": 31.79,
+        "kilocalories": 252.0
+    },
+    {
+        "food name": "Dressing with meat and vegetables",
+        "proteins": 7.96,
+        "fats": 14.56,
+        "carbohydrates": 20.33,
+        "kilocalories": 243.0
+    },
+    {
+        "food name": "Puerto Rican white cheese",
+        "proteins": 18.09,
+        "fats": 23.82,
+        "carbohydrates": 2.98,
+        "kilocalories": 299.0
+    },
+    {
+        "food name": "Scallops and noodles with cheese sauce",
+        "proteins": 8.46,
+        "fats": 5.64,
+        "carbohydrates": 15.05,
+        "kilocalories": 145.0
+    },
+    {
+        "food name": "Cheese flavored corn snacks",
+        "proteins": 5.85,
+        "fats": 36.01,
+        "carbohydrates": 53.53,
+        "kilocalories": 560.0
+    },
+    {
+        "food name": "Chicken or turkey and noodles with cream or white sauce",
+        "proteins": 7.39,
+        "fats": 5.51,
+        "carbohydrates": 15.24,
+        "kilocalories": 140.0
+    },
+    {
+        "food name": "Ham or pork with mushroom sauce",
+        "proteins": 20.55,
+        "fats": 7.98,
+        "carbohydrates": 1.84,
+        "kilocalories": 167.0
+    },
+    {
+        "food name": "Meat loaf made with chicken or turkey",
+        "proteins": 18.77,
+        "fats": 7.27,
+        "carbohydrates": 8.08,
+        "kilocalories": 172.0
+    },
+    {
+        "food name": "Topping from meat and vegetable pizza",
+        "proteins": 17.55,
+        "fats": 22.03,
+        "carbohydrates": 7.66,
+        "kilocalories": 299.0
+    },
+    {
+        "food name": "Other vegetables as ingredient in omelet",
+        "proteins": 3.25,
+        "fats": 0.39,
+        "carbohydrates": 5.74,
+        "kilocalories": 39.0
+    },
+    {
+        "food name": "Fish and rice with mushroom sauce",
+        "proteins": 5.34,
+        "fats": 5.16,
+        "carbohydrates": 16.11,
+        "kilocalories": 135.0
+    },
+    {
+        "food name": "Topping from vegetable pizza",
+        "proteins": 15.59,
+        "fats": 15.61,
+        "carbohydrates": 12.18,
+        "kilocalories": 247.0
+    },
+    {
+        "food name": "Beef egg foo yung",
+        "proteins": 13.82,
+        "fats": 8.08,
+        "carbohydrates": 4.78,
+        "kilocalories": 147.0
+    },
+    {
+        "food name": "Fruit juice drink (Capri Sun)",
+        "proteins": 0.0,
+        "fats": 0.07,
+        "carbohydrates": 10.0,
+        "kilocalories": 39.0
+    },
+    {
+        "food name": "Blue or roquefort cheese dressing",
+        "proteins": 1.37,
+        "fats": 51.1,
+        "carbohydrates": 4.77,
+        "kilocalories": 484.0
+    },
+    {
+        "food name": "Sun-dried tomatoes",
+        "proteins": 14.11,
+        "fats": 2.97,
+        "carbohydrates": 55.76,
+        "kilocalories": 258.0
+    },
+    {
+        "food name": "Black beans with meat",
+        "proteins": 10.61,
+        "fats": 6.81,
+        "carbohydrates": 19.06,
+        "kilocalories": 177.0
+    },
+    {
+        "food name": "Baked beans from fast food / restaurant",
+        "proteins": 4.38,
+        "fats": 1.35,
+        "carbohydrates": 23.29,
+        "kilocalories": 116.0
+    },
+    {
+        "food name": "Beef and rice with tomato-based sauce",
+        "proteins": 6.39,
+        "fats": 5.15,
+        "carbohydrates": 15.88,
+        "kilocalories": 136.0
+    },
+    {
+        "food name": "Ham or pork salad",
+        "proteins": 13.31,
+        "fats": 18.09,
+        "carbohydrates": 2.75,
+        "kilocalories": 230.0
+    },
+    {
+        "food name": "Beef and noodles with cream or white sauce",
+        "proteins": 7.86,
+        "fats": 5.33,
+        "carbohydrates": 15.02,
+        "kilocalories": 140.0
+    },
+    {
+        "food name": "Chicken as ingredient in recipes",
+        "proteins": 28.06,
+        "fats": 7.34,
+        "carbohydrates": 0.0,
+        "kilocalories": 182.0
+    },
+    {
+        "food name": "Beans and brown rice",
+        "proteins": 6.52,
+        "fats": 4.49,
+        "carbohydrates": 24.17,
+        "kilocalories": 162.0
+    },
+    {
+        "food name": "Beef and potatoes with cheese sauce",
+        "proteins": 8.15,
+        "fats": 5.6,
+        "carbohydrates": 11.1,
+        "kilocalories": 126.0
+    },
+    {
+        "food name": "Turkey or chicken and beef sausage",
+        "proteins": 16.47,
+        "fats": 20.47,
+        "carbohydrates": 2.23,
+        "kilocalories": 267.0
+    },
+    {
+        "food name": "Pinto beans and white rice",
+        "proteins": 6.09,
+        "fats": 4.38,
+        "carbohydrates": 25.82,
+        "kilocalories": 167.0
+    },
+    {
+        "food name": "Sausage with tomato-based sauce",
+        "proteins": 13.28,
+        "fats": 19.09,
+        "carbohydrates": 2.58,
+        "kilocalories": 234.0
+    },
+    {
+        "food name": "Ham or pork and potatoes with gravy",
+        "proteins": 5.4,
+        "fats": 6.33,
+        "carbohydrates": 11.68,
+        "kilocalories": 126.0
+    },
+    {
+        "food name": "Pork or ham with soy-based sauce",
+        "proteins": 14.88,
+        "fats": 12.68,
+        "carbohydrates": 3.35,
+        "kilocalories": 190.0
+    },
+    {
+        "food name": "Chicken or turkey with teriyaki",
+        "proteins": 25.73,
+        "fats": 5.96,
+        "carbohydrates": 1.62,
+        "kilocalories": 163.0
+    },
+    {
+        "food name": "Tuna noodle casserole with mushroom sauce",
+        "proteins": 9.02,
+        "fats": 5.18,
+        "carbohydrates": 13.92,
+        "kilocalories": 139.0
+    },
+    {
+        "food name": "Refried beans with meat",
+        "proteins": 7.81,
+        "fats": 2.51,
+        "carbohydrates": 11.76,
+        "kilocalories": 99.0
+    },
+    {
+        "food name": "Taco or tostada salad with chicken",
+        "proteins": 7.86,
+        "fats": 8.04,
+        "carbohydrates": 16.21,
+        "kilocalories": 166.0
+    },
+    {
+        "food name": "Shrimp egg foo yung",
+        "proteins": 11.69,
+        "fats": 6.16,
+        "carbohydrates": 5.2,
+        "kilocalories": 125.0
+    },
+    {
+        "food name": "Dressing with chicken or turkey and vegetables",
+        "proteins": 8.22,
+        "fats": 11.17,
+        "carbohydrates": 20.94,
+        "kilocalories": 217.0
+    },
+    {
+        "food name": "Apple salad with dressing",
+        "proteins": 1.48,
+        "fats": 13.92,
+        "carbohydrates": 12.15,
+        "kilocalories": 172.0
+    },
+    {
+        "food name": "Chicken or turkey cacciatore",
+        "proteins": 13.19,
+        "fats": 10.62,
+        "carbohydrates": 6.92,
+        "kilocalories": 174.0
+    },
+    {
+        "food name": "Spaghetti sauce with poultry and added vegetables",
+        "proteins": 6.39,
+        "fats": 2.4,
+        "carbohydrates": 6.03,
+        "kilocalories": 71.0
+    },
+    {
+        "food name": "Black beans and brown rice",
+        "proteins": 6.03,
+        "fats": 4.59,
+        "carbohydrates": 23.4,
+        "kilocalories": 158.0
+    },
+    {
+        "food name": "Macaroni or pasta salad with egg",
+        "proteins": 5.19,
+        "fats": 11.44,
+        "carbohydrates": 22.53,
+        "kilocalories": 215.0
+    },
+    {
+        "food name": "Porcupine balls with mushroom sauce",
+        "proteins": 10.34,
+        "fats": 7.76,
+        "carbohydrates": 10.71,
+        "kilocalories": 157.0
+    },
+    {
+        "food name": "Beef and rice with cream sauce",
+        "proteins": 6.7,
+        "fats": 5.24,
+        "carbohydrates": 15.9,
+        "kilocalories": 139.0
+    },
+    {
+        "food name": "Beef with mushroom sauce",
+        "proteins": 21.97,
+        "fats": 7.54,
+        "carbohydrates": 1.83,
+        "kilocalories": 163.0
+    },
+    {
+        "food name": "Pinto beans with meat",
+        "proteins": 10.73,
+        "fats": 6.9,
+        "carbohydrates": 21.07,
+        "kilocalories": 186.0
+    },
+    {
+        "food name": "Beef and noodles with soy-based sauce",
+        "proteins": 13.19,
+        "fats": 10.05,
+        "carbohydrates": 7.54,
+        "kilocalories": 173.0
+    },
+    {
+        "food name": "Chicken or turkey and potatoes with gravy",
+        "proteins": 7.28,
+        "fats": 6.32,
+        "carbohydrates": 8.93,
+        "kilocalories": 121.0
+    },
+    {
+        "food name": "Beef and rice with gravy",
+        "proteins": 6.28,
+        "fats": 5.12,
+        "carbohydrates": 15.98,
+        "kilocalories": 137.0
+    },
+    {
+        "food name": "Club sandwich on wheat",
+        "proteins": 15.98,
+        "fats": 7.65,
+        "carbohydrates": 21.38,
+        "kilocalories": 220.0
+    },
+    {
+        "food name": "Double cheeseburger (McDonalds)",
+        "proteins": 16.24,
+        "fats": 16.18,
+        "carbohydrates": 17.97,
+        "kilocalories": 282.0
+    },
+    {
+        "food name": "Pinto beans and brown rice",
+        "proteins": 6.12,
+        "fats": 4.65,
+        "carbohydrates": 24.8,
+        "kilocalories": 164.0
+    },
+    {
+        "food name": "Macaroni or pasta salad with chicken",
+        "proteins": 7.82,
+        "fats": 10.75,
+        "carbohydrates": 20.93,
+        "kilocalories": 213.0
+    },
+    {
+        "food name": "Breakfast pizza with egg",
+        "proteins": 14.02,
+        "fats": 14.5,
+        "carbohydrates": 25.63,
+        "kilocalories": 292.0
+    },
+    {
+        "food name": "Vegetable stew without meat",
+        "proteins": 2.68,
+        "fats": 0.98,
+        "carbohydrates": 9.62,
+        "kilocalories": 56.0
+    },
+    {
+        "food name": "Oatmeal beverage with water",
+        "proteins": 0.25,
+        "fats": 0.15,
+        "carbohydrates": 10.59,
+        "kilocalories": 45.0
+    },
+    {
+        "food name": "Multiple meat sandwich on wheat",
+        "proteins": 13.69,
+        "fats": 5.78,
+        "carbohydrates": 20.08,
+        "kilocalories": 189.0
+    },
+    {
+        "food name": "Nutella sandwich on wheat bread",
+        "proteins": 9.32,
+        "fats": 12.93,
+        "carbohydrates": 51.31,
+        "kilocalories": 359.0
+    },
+    {
+        "food name": "Vegetable curry with rice",
+        "proteins": 2.02,
+        "fats": 3.25,
+        "carbohydrates": 16.43,
+        "kilocalories": 102.0
+    },
+    {
+        "food name": "Macaroni or pasta salad with tuna and egg",
+        "proteins": 7.14,
+        "fats": 9.96,
+        "carbohydrates": 19.35,
+        "kilocalories": 197.0
+    },
+    {
+        "food name": "Beef stroganoff with noodles",
+        "proteins": 7.67,
+        "fats": 6.99,
+        "carbohydrates": 8.86,
+        "kilocalories": 129.0
+    },
+    {
+        "food name": "Double cheeseburger (Burger King)",
+        "proteins": 16.18,
+        "fats": 15.03,
+        "carbohydrates": 17.2,
+        "kilocalories": 273.0
+    },
+    {
+        "food name": "Tuna salad sandwich on wheat",
+        "proteins": 10.54,
+        "fats": 11.89,
+        "carbohydrates": 17.02,
+        "kilocalories": 217.0
+    },
+    {
+        "food name": "Chicken or turkey cordon bleu",
+        "proteins": 22.64,
+        "fats": 9.17,
+        "carbohydrates": 9.29,
+        "kilocalories": 210.0
+    }
+]
