@@ -1,64 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Nutrition Tracker</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                {% if current_user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link" href="/calculate">Calculate</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/meals">My Meals</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/nutrition-history">My Progress</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/profile">My Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/logout">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/calculate">Calculate</a>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
-    </nav>
-
-    {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-    <div class="container mt-3">
-        {% for category, message in messages %}
-        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+<div id="message"></div>
+    <div class="vertical-center-container mx-auto">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100">
+            <a class="navbar-brand mx-auto" href="/">Nutrition Tracker</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculate">Calculate Today</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">My Data</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculate">Calculate Today</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <div class="content-container text-white mx-auto">
+            <div class="container text-center py-5">
+                {% block content %}{% endblock %}
+            </div>
         </div>
-        {% endfor %}
+        <div class="container mt-3">
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endif %}
-    {% endwith %}
-
-    <div class="container mt-4">
-        {% block content %}{% endblock %}
-    </div>
-    <script src="static/st.js" ></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>

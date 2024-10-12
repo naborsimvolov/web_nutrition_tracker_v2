@@ -1,30 +1,256 @@
-{% extends "base.html" %}
-{% block title %}Calculate Nutrition{% endblock %}
-{% block content %}
-<div class="container">
-    <h2 class="text-center mt-3 mb-4">Calculate What You've Eaten</h2>
-    <div class="form-group">
-        <label for="mealInput">Meal</label>
-        <input type="text" id="mealInput" class="form-control" placeholder="Start typing a meal name..." oninput="suggestMeals(this.value)">
-        <ul id="suggestionList" class="list-group"></ul>
-    </div>
-    <div class="form-group">
-        <label for="mealAmount">Amount (grams)</label>
-        <input type="number" id="mealAmount" class="form-control" placeholder="Enter amount">
-    </div>
-    <button onclick="addMealToList()" class="btn btn-primary">Add Meal to List</button>
-
-    <ul id="addedMealsList" class="list-group mt-3"></ul>
-    <button onclick="calculateTotalNutrition()" class="btn btn-info mt-3">Calculate Total Nutrition</button>
-
-    <div id="totalNutritionDisplay" class="mt-4" style="display:none;">
-        <h3>Total Nutrition Calculated</h3>
-        <p id="totalCalories"></p>
-        <p id="totalCarbs"></p>
-        <p id="totalProteins"></p>
-        <p id="totalFats"></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Nutrition</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<!-- new wrapper div -->
+<div class="container-wrapper">
+    <div class="vertical-center-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary w-100">
+            <a class="navbar-brand mx-auto" href="/">Nutrition Tracker</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculate">Calculate Today</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">My Data</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-container text-white">
+            <div class="container text-center py-5">
+                <h2 class="text-center mt-3 mb-4">Calculate What You've Eaten</h2>
+                <div class="form-group">
+                    <label for="mealInput">Meal:</label>
+                    <input type="text" id="mealInput" class="form-control meal-name-input" placeholder="Start typing a meal name..." oninput="suggestMeals(this.value)">
+                    <ul id="suggestionList" class="list-group"></ul>
+                </div>
+                <div class="form-group">
+                    <label for="mealAmount">Amount (grams):</label>
+                    <input type="number" id="mealAmount" class="form-control amount-input" placeholder="Enter amount">
+                </div>
+                <button onclick="addMealToList()" class="btn btn-primary">Add Meal to List</button>
+                <ul id="addedMealsList" class="list-group mt-3"></ul>
+                <button onclick="calculateTotalNutrition()" class="btn btn-info mt-3">Calculate Total Nutrition</button>
+                <div id="totalNutritionDisplay" class="mt-4">
+                    <h3>Total Nutrition Calculated</h3>
+                    <p id="totalCalories"></p>
+                    <p id="totalCarbs"></p>
+                    <p id="totalProteins"></p>
+                    <p id="totalFats"></p>
+                </div>
+                <div id="chartsContainer" class="mt-5">
+                    <h3 class="text-center mb-4">Your Daily Goals Progress</h3>
+                    <canvas id="nutritionGoalsChart"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<script src="static/calculate.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // global variables
+    let addedMeals = [];
+    let suggestions = [];
+    let nutritionChart;  // store chart instance
+    //  global functions
+    // fetch and display current nutrition data
+    function fetchCurrentNutrition() {
+        fetch('/get-today-nutrition')
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    console.error('Error fetching current nutrition:', data.error);
+                } else {
+                    updateCharts(data.total_calories, data.total_carbs, data.total_proteins, data.total_fats);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching current nutrition:', error);
+            });
+    }
+    // update charts
+    function updateCharts(totalCalories, totalCarbs, totalProteins, totalFats) {
+        const userGoals = {{ user_goals|tojson|safe }};
+        const goals = {
+            calories: userGoals.calories,
+            carbs: userGoals.carbs,
+            proteins: userGoals.proteins,
+            fats: userGoals.fats
+        };
+        const caloriesPercent = (totalCalories / goals.calories) * 100;
+        const carbsPercent = (totalCarbs / goals.carbs) * 100;
+        const proteinsPercent = (totalProteins / goals.proteins) * 100;
+        const fatsPercent = (totalFats / goals.fats) * 100;
+        const labels = ['Calories', 'Carbs', 'Proteins', 'Fats'];
+        const percentages = [caloriesPercent, carbsPercent, proteinsPercent, fatsPercent];
+        const actualValues = [totalCalories, totalCarbs, totalProteins, totalFats];
+        // destr previous chart if it exists
+        if (nutritionChart) {
+            nutritionChart.destroy();
+        }
 
-{% endblock %}
+        const ctx = document.getElementById('nutritionGoalsChart').getContext('2d');
+        nutritionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Consumed (%)',
+                    data: percentages,
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',  // Horizontal bar chart
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: function(value) { return value + "%" }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const index = context.dataIndex;
+                                return `${labels[index]}: ${actualValues[index].toFixed(1)}g (${percentages[index].toFixed(1)}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+    // suggest meals
+    function suggestMeals(inputText) {
+        fetch(`/suggest-meals?query=${inputText}`)
+            .then(response => response.json())
+            .then(meals => {
+                suggestions = meals;
+                let suggestionList = document.getElementById('suggestionList');
+                suggestionList.innerHTML = '';
+                meals.forEach(meal => {
+                    let listItem = document.createElement('li');
+                    listItem.textContent = meal.name;
+                    listItem.className = 'list-group-item';
+                    listItem.onclick = function() {
+                        document.getElementById('mealInput').value = meal.name;
+                        suggestionList.innerHTML = '';
+                    };
+                    suggestionList.appendChild(listItem);
+                });
+            });
+    }
+    // add meal to list
+    function addMealToList() {
+        let mealName = document.getElementById('mealInput').value;
+        let mealAmount = parseInt(document.getElementById('mealAmount').value);
+        let meal = suggestions.find(m => m.name === mealName);
+        if (meal && mealAmount > 0) {
+            addedMeals.push({
+                id: meal.id,
+                name: meal.name,
+                amount: mealAmount,
+                calories: meal.calories,
+                carbs: meal.carbs,
+                proteins: meal.proteins,
+                fats: meal.fats
+            });
+            updateAddedMealsList();
+            document.getElementById('mealInput').value = '';
+            document.getElementById('mealAmount').value = '';
+        }
+    }
+    // update displayed list of meals
+    function updateAddedMealsList() {
+        let listElement = document.getElementById('addedMealsList');
+        listElement.innerHTML = '';
+        addedMeals.forEach((meal, index) => {
+            let listItem = document.createElement('li');
+            listItem.className = 'list-group-item';
+            listItem.innerHTML = `${meal.name} - ${meal.amount}g
+                <button class="btn btn-danger btn-sm" onclick="removeMealFromList(${index})">Remove</button>`;
+            listElement.appendChild(listItem);
+        });
+    }
+    // remove a meal from the list
+    function removeMealFromList(index) {
+        addedMeals.splice(index, 1);
+        updateAddedMealsList();
+    }
+    //  calculate total nutrition and update charts
+    function calculateTotalNutrition() {
+        let totalCalories = 0, totalCarbs = 0, totalProteins = 0, totalFats = 0;
+        addedMeals.forEach(meal => {
+            totalCalories += meal.calories * meal.amount / 100;
+            totalCarbs += meal.carbs * meal.amount / 100;
+            totalProteins += meal.proteins * meal.amount / 100;
+            totalFats += meal.fats * meal.amount / 100;
+        });
+        document.getElementById('totalCalories').textContent = `Total Calories: ${totalCalories.toFixed(1)}`;
+        document.getElementById('totalCarbs').textContent = `Total Carbs: ${totalCarbs.toFixed(1)}g`;
+        document.getElementById('totalProteins').textContent = `Total Proteins: ${totalProteins.toFixed(1)}g`;
+        document.getElementById('totalFats').textContent = `Total Fats: ${totalFats.toFixed(1)}g`;
+        document.getElementById('totalNutritionDisplay').classList.add('visible');
+        // send data to server
+        fetch('/calculate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ mealData: addedMeals })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Please calculate values for not empty list`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.error) {
+                alert(data.error);
+            } else {
+                fetchCurrentNutrition(); // refresh charts
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred: ' + error.message);
+        });
+    }
+    // fetchCurrentNutrition when DOM is loaded
+    document.addEventListener("DOMContentLoaded", () => {
+        fetchCurrentNutrition();
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

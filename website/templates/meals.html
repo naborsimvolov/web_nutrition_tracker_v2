@@ -1,41 +1,43 @@
 {% extends "base.html" %}
 {% block title %}Manage Meals{% endblock %}
 {% block content %}
+<div id="message"></div>
 <div class="container">
-    <h2 class="text-center mt-3 mb-4">Your Meals</h2>
-    <ul class="list-group mb-5">
-        {% for meal in user_meals %}
-        <li class="list-group-item">
-            Name: {{ meal.name }}, Calories: {{ meal.calories }}, Carbs: {{ meal.carbs }}g, Proteins: {{ meal.proteins }}g, Fats: {{ meal.fats }}g
-            <button onclick="deleteMeal('{{ meal.id }}')" class="btn btn-danger btn-sm float-right">Delete</button>
-        </li>
-        {% endfor %}
-    </ul>
+    <h2 class="text-center mt-3 mb-4">Manage Your Meals Database</h2>
+    <!-- search inp -->
+    <label for="mealName">Meals already in the database:</label>
+    <div class="form-group">
+        <input type="text" id="searchInput" class="form-control meals-management-input" placeholder="Start typing name of a meal..." oninput="searchMeals(this.value)">
+    </div>
 
-    <h2 class="text-center mt-3 mb-4">Add a Meal</h2>
+    <!-- search results list -->
+    <ul id="mealsList" class="list-group mb-5"></ul>
+
+    <h2 class="text-center mt-3 mb-4">Add a new meal to your database</h2>
     <div class="form-group">
-        <label for="mealName">Meal Name</label>
-        <input type="text" class="form-control" id="mealName">
+        <label for="mealName">Meal Name:</label>
+        <input type="text" class="form-control meals-management-input" id="mealName">
     </div>
     <div class="form-group">
-        <label for="calories">Calories (g)</label>
-        <input type="number" step="0.1" class="form-control" id="calories">
+        <label for="calories">Calories (per 100g):</label>
+        <input type="number" step="1.0" class="form-control meals-management-input" id="calories">
     </div>
     <div class="form-group">
-        <label for="carbs">Carbohydrates (g)</label>
-        <input type="number" step="0.1" class="form-control" id="carbs">
+        <label for="carbs">Carbohydrates (g per 100g):</label>
+        <input type="number" step="1.0" class="form-control meals-management-input" id="carbs">
     </div>
     <div class="form-group">
-        <label for="proteins">Proteins (g)</label>
-        <input type="number" step="0.1" class="form-control" id="proteins">
+        <label for="proteins">Proteins (g per 100g):</label>
+        <input type="number" step="1.0" class="form-control meals-management-input" id="proteins">
     </div>
     <div class="form-group">
-        <label for="fats">Fats (g)</label>
-        <input type="number" step="0.1" class="form-control" id="fats">
+        <label for="fats">Fats (g per 100g):</label>
+        <input type="number" step="1.0" class="form-control meals-management-input" id="fats">
     </div>
     <button onclick="addMeal()" class="btn btn-primary">Add Meal</button>
 </div>
-<script src="static/meals.js"></script>
+<script src="{{ url_for('static', filename='meals.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 {% endblock %}
-
-

@@ -3,7 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 from os import path
 from flask_login import LoginManager
 
-
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
@@ -14,11 +13,10 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
-
     from .home import home
     from .auth.auth import auth
     from .nutrition.nutrition_managment import nutrition_management
-    from .nutrition.nutrition_history import nutrition_get_history
+    from .nutrition.nutrition_history import nutrition_history
     from .nutrition.nutrition_calculate import nutrition_calculate
     from .user.user_page import user_profile
     from .models import User, UserMeal
@@ -28,7 +26,7 @@ def create_app():
     app.register_blueprint(home, url_prefix='/')
     app.register_blueprint(nutrition_calculate, url_prefix='/')
     app.register_blueprint(nutrition_management, url_prefix='/')
-    app.register_blueprint(nutrition_get_history, url_prefix='/')
+    app.register_blueprint(nutrition_history, url_prefix='/')
 
 
     with app.app_context():

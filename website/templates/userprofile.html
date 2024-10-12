@@ -3,9 +3,108 @@
 {% block content %}
 <div class="container">
   <h3 align="center">Hello, {{ current_user.first_name }}</h3>
+
   <div align="center">
     <a href="/meals" class="btn btn-primary my-2">Manage My Meals Database</a>
     <a href="/nutrition-graphs" class="btn btn-success my-2">Go to My History Graphs</a>
   </div>
+  <div align="center" class="mt-4">
+    <a href="{{ url_for('auth.logout') }}" class="btn btn-danger">Logout</a>
+  </div>
+  <h3 class="text-center mt-5">Set Daily Goals:</h3>
+  <div class="form-group">
+      <label for="carbsSlider">Carbohydrates (g):</label>
+      <input type="range" id="carbsSlider" class="form-control-range" min="0" max="500" step="1" value="{{ current_user.daily_carbs_goal }}" oninput="updateGoals()">
+      <span id="carbsValue">{{ current_user.daily_carbs_goal }}</span> g
+  </div>
+  <div class="form-group">
+      <label for="proteinsSlider">Proteins (g):</label>
+      <input type="range" id="proteinsSlider" class="form-control-range" min="0" max="200" step="1" value="{{ current_user.daily_proteins_goal }}" oninput="updateGoals()">
+      <span id="proteinsValue">{{ current_user.daily_proteins_goal }}</span> g
+  </div>
+  <div class="form-group">
+      <label for="fatsSlider">Fats (g):</label>
+      <input type="range" id="fatsSlider" class="form-control-range" min="0" max="150" step="1" value="{{ current_user.daily_fats_goal }}" oninput="updateGoals()">
+      <span id="fatsValue">{{ current_user.daily_fats_goal }}</span> g
+  </div>
+<div class="form-group">
+    <label for="caloriesGoal" class="d-block">Total kCalories:</label>
+    <input type="number" id="caloriesGoal" class="form-control calorie-display" value="{{ current_user.daily_calories_goal }}" readonly>
 </div>
+  <div align="center">
+    <button onclick="saveGoals()" class="btn btn-primary">Save Goals</button>
+  </div>
+</div>
+
+<script>
+    function updateGoals() {
+        let carbs = parseFloat(document.getElementById('carbsSlider').value);
+        let proteins = parseFloat(document.getElementById('proteinsSlider').value);
+        let fats = parseFloat(document.getElementById('fatsSlider').value);
+
+        document.getElementById('carbsValue').textContent = carbs;
+        document.getElementById('proteinsValue').textContent = proteins;
+        document.getElementById('fatsValue').textContent = fats;
+
+        // 1g carbs = 4 kcal, 1g protein = 4 kcal, 1g fat = 9 kcal
+        let calories = (carbs * 4) + (proteins * 4) + (fats * 9);
+        document.getElementById('caloriesGoal').value = calories.toFixed(0);
+    }
+
+    function saveGoals() {
+        let carbs = parseFloat(document.getElementById('carbsSlider').value);
+        let proteins = parseFloat(document.getElementById('proteinsSlider').value);
+        let fats = parseFloat(document.getElementById('fatsSlider').value);
+        let calories = parseFloat(document.getElementById('caloriesGoal').value);
+
+        let goalsData = {
+            carbs: carbs,
+            proteins: proteins,
+            fats: fats,
+            calories: calories
+        };
+
+        fetch('/save-goals', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(goalsData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Daily were goals updated successfully!');
+            }
+            if (!data.success) {
+                alert('Error saving goals. Please report the error to the developer.');
+            }
+        });
+    }
+</script>
+
+<style>
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    .calorie-display {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        background-color: #000000;
+        color: #ffffff;
+        border: 1px solid #6A0DAD;
+    }
+    .calorie-display:focus {
+        background-color: #000000;
+        color: #ffffff;
+        outline: none;
+        box-shadow: none;
+    }
+</style>
 {% endblock %}

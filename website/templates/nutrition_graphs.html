@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+{% block title %}My Nutrition History{% endblock %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-3 mb-4">My Nutrition History</h2>
+
+    <!-- Date range controls -->
+    <div class="form-group">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" class="form-control" min="2024-10-03">
+    </div>
+    <div class="form-group">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" class="form-control" min="2024-10-03">
+    </div>
+    <div class="form-group">
+        <button id="showDataButton" class="btn btn-primary">Show Data</button>
+    </div>
+    <div class="form-group">
+        <button id="pastWeekButton" class="btn btn-secondary">Past Week</button>
+        <button id="pastMonthButton" class="btn btn-secondary">Past Month</button>
+    </div>
+
+    <h3 class="text-center mt-5">Calories</h3>
+    <div class="chart-container" id="chartsContainer">
+        <canvas id="caloriesChart" width="400" height="200"></canvas>
+    </div>
+
+    <h3 class="text-center mt-5">Macronutrients</h3>
+    <div class="chart-container" id="chartsContainer">
+        <canvas id="macrosChart" width="400" height="200"></canvas>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+let caloriesCtx;
+let macrosCtx;
+let caloriesChart;
+let macrosChart;
+
+// Define functions in the global scope
+function setDateRange(range) {
+    const today = new Date();
+    let startDate = new Date();
+    if (range === 'week') {
+        startDate.setDate(today.getDate() - 6); // Past 6 days + today = 7 days
+    } else if (range === 'month') {
+        startDate.setDate(today.getDate() - 29); // Past 29 days + today = 30 days
+    }
+    document.getElementById('startDate').value = startDate.toISOString().split('T')[0];
+    document.getElementById('endDate').value = today.toISOString().split('T')[0];
+    fetchDataAndRenderCharts();
+}
+
+function fetchDataAndRenderCharts() {
+    const startDate = document.getElementById('startDate').value;
+    const endDate = document.getElementById('endDate').value;
+
+    if (!startDate || !endDate) {
+        alert('Please select both start and end dates.');
+        return;
+    }
+
+    fetch('/get-consumption-data', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ start_date: startDate, end_date: endDate })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+            if (caloriesChart) {
+                caloriesChart.destroy();
+            }
+            if (macrosChart) {
+                macrosChart.destroy();
+            }
+            return;
+        }
+
+        const labels = data.map(item => item.date);
+        const caloriesData = data.map(item => item.calories);
+        const carbsData = data.map(item => item.carbs);
+        const proteinsData = data.map(item => item.proteins);
+        const fatsData = data.map(item => item.fats);
+
+        // destroy existing charts if exists
+        if (caloriesChart) {
+            caloriesChart.destroy();
+        }
+        if (macrosChart) {
+            macrosChart.destroy();
+        }
+        const commonOptions = {
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 20 // egend labels
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Date',
+                        font: {
+                            size: 17, //x axis title
+                        }
+                    },
+                    ticks: {
+                        font: {
+                            size: 15 // x axis title
+                        }
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Amount',
+                        font: {
+                            size: 18 //y axis title
+                        }
+                    },
+                    ticks: {
+                        font: {
+                            size: 16 //y axis labels
+                        }
+                    }
+                }
+            }
+        };
+
+        // calories chart
+        caloriesChart = new Chart(caloriesCtx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Calories',
+                        data: caloriesData,
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        fill: false
+                    }
+                ]
+            },
+            options: commonOptions
+        });
+
+        //  horizontal grid lines
+        macrosChart = new Chart(macrosCtx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Carbs',
+                        data: carbsData,
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        fill: false
+                    },
+                    {
+                        label: 'Proteins',
+                        data: proteinsData,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: false
+                    },
+                    {
+                        label: 'Fats',
+                        data: fatsData,
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    x: commonOptions.scales.x,
+                    y: {
+                        ...commonOptions.scales.y,
+                        grid: {
+                            display: true,
+                            drawBorder: true,
+                            drawOnChartArea: true,
+                            drawTicks: true,
+                            color: 'rgba(200, 200, 200, 0.5)',
+                        }
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+}
+
+// DOM
+document.addEventListener("DOMContentLoaded", function() {
+    caloriesCtx = document.getElementById('caloriesChart').getContext('2d');
+    macrosCtx = document.getElementById('macrosChart').getContext('2d');
+    caloriesChart = null; // Initialize chart variables
+    macrosChart = null;
+
+    // event listeners
+    document.getElementById('showDataButton').addEventListener('click', fetchDataAndRenderCharts);
+    document.getElementById('pastWeekButton').addEventListener('click', function() {
+        setDateRange('week');
+    });
+    document.getElementById('pastMonthButton').addEventListener('click', function() {
+        setDateRange('month');
+    });
+
+    // with past week data
+    setDateRange('week');
+});
+</script>
+{% endblock %}
