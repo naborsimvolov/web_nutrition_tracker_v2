@@ -1,79 +1,104 @@
-from flask import Blueprint, render_template, request, jsonify
-from flask_login import login_required, current_user
-from ..models import UserMeal
+from __future__ import annotations
+
+from flask import Blueprint, jsonify, render_template, request
+from flask_login import current_user, login_required
+
 from .. import db
+from ..models import UserMeal
 
-nutrition_management = Blueprint('nutrition_management', __name__)
+nutrition_management = Blueprint("nutrition_management", __name__)
 
-@nutrition_management.route('/add-meal', methods=['POST'])
+
+def _parse_float(value, field_name: str) -> float:
+    try:
+        parsed = float(value)
+    except (TypeError, ValueError) as error:
+        raise ValueError(f"{field_name} must be a number") from error
+
+    if parsed < 0:
+        raise ValueError(f"{field_name} must be non-negative")
+
+    return parsed
+
+
+@nutrition_management.route("/add-meal", methods=["POST"])
 @login_required
 def add_meal():
-    try:
-        data = request.get_json()
-        meal_name = data.get('mealName')
-        calories = data.get("calories")
-        carbs = data.get('carbs')
-        proteins = data.get('proteins')
-        fats = data.get('fats')
-        existing_meal = UserMeal.query.filter_by(name=meal_name, user_id=current_user.id).first()
-        if existing_meal:
-            return jsonify({'error': 'A meal with this name already exists. Please delete it first if you wish to overwrite it.'}), 400
-        if meal_name and calories and carbs and proteins and fats:
-            try:
-                new_meal = UserMeal(
-                    name=meal_name,
-                    carbs=float(carbs),
-                    proteins=float(proteins),
-                    fats=float(fats),
-                    calories=float(calories),
-                    user_id=current_user.id
-                )
-                db.session.add(new_meal)
-                db.session.commit()
-                return jsonify({'success': 'Meal added successfully'}), 201
-            except ValueError as e:
-                return jsonify({'error': f'Error adding meal: {str(e)}'}), 400
-        else:
-            return jsonify({'error': 'All fields are required to add a new meal'}), 400
-    except Exception as e:
-        return jsonify({'error': f'Server Error: {str(e)}'}), 500
+    data = request.get_json(silent=True) or {}
 
-@nutrition_management.route('/delete-meal/<int:meal_id>', methods=['POST'])
+    meal_name = (data.get("mealName") or "").strip()
+
+    if not meal_name:
+        return jsonify({"error": "Meal name is required."}), 400
+
+    existing_meal = UserMeal.query.filter_by(name=meal_name, user_id=current_user.id).first()
+    if existing_meal:
+        return jsonify({"error": "A meal with this name already exists."}), 400
+
+    try:
+        new_meal = UserMeal(
+            name=meal_name,
+            calories=_parse_float(data.get("calories"), "Calories"),
+            carbs=_parse_float(data.get("carbs"), "Carbs"),
+            proteins=_parse_float(data.get("proteins"), "Proteins"),
+            fats=_parse_float(data.get("fats"), "Fats"),
+            user_id=current_user.id,
+        )
+    except ValueError as error:
+        return jsonify({"error": str(error)}), 400
+
+    db.session.add(new_meal)
+    db.session.commit()
+
+    return jsonify({"success": "Meal added successfully."}), 201
+
+
+@nutrition_management.route("/delete-meal/<int:meal_id>", methods=["POST"])
 @login_required
 def delete_meal(meal_id):
-    meal = UserMeal.query.get(meal_id)
-    if meal and meal.user_id == current_user.id:
-        db.session.delete(meal)
-        db.session.commit()
-        return jsonify({'message': 'Meal deleted successfully'}), 200
-    else:
-        return jsonify({'error': 'Meal not found or permission denied'}), 404
+    meal = db.session.get(UserMeal, meal_id)
 
-@nutrition_management.route('/meals', methods=['GET'])
+    if meal is None or meal.user_id != current_user.id:
+        return jsonify({"error": "Meal not found or permission denied."}), 404
+
+    db.session.delete(meal)
+    db.session.commit()
+
+    return jsonify({"message": "Meal deleted successfully."})
+
+
+@nutrition_management.route("/meals", methods=["GET"])
 @login_required
 def manage_meals():
-    user_meals = UserMeal.query.filter_by(user_id=current_user.id).all()
-    return render_template('meals.html', user=current_user, user_meals=user_meals)
+    user_meals = UserMeal.query.filter_by(user_id=current_user.id).order_by(UserMeal.name.asc()).all()
+    return render_template("meals.html", user=current_user, user_meals=user_meals)
 
-@nutrition_management.route('/search-meals', methods=['GET'])
+
+@nutrition_management.route("/search-meals", methods=["GET"])
 @login_required
 def search_meals():
-    query = request.args.get('query', '').strip()
+    query = request.args.get("query", "").strip()
+
     if not query:
         return jsonify([])
 
-    matching_meals = UserMeal.query.filter(
-        UserMeal.name.ilike(f'%{query}%'),
-        UserMeal.user_id == current_user.id
-    ).all()
+    matching_meals = (
+        UserMeal.query.filter(UserMeal.name.ilike(f"%{query}%"), UserMeal.user_id == current_user.id)
+        .order_by(UserMeal.name.asc())
+        .limit(30)
+        .all()
+    )
 
-    meals_data = [{
-        'id': meal.id,
-        'name': meal.name,
-        'calories': meal.calories,
-        'carbs': meal.carbs,
-        'proteins': meal.proteins,
-        'fats': meal.fats
-    } for meal in matching_meals]
-
-    return jsonify(meals_data), 200
+    return jsonify(
+        [
+            {
+                "id": meal.id,
+                "name": meal.name,
+                "calories": meal.calories,
+                "carbs": meal.carbs,
+                "proteins": meal.proteins,
+                "fats": meal.fats,
+            }
+            for meal in matching_meals
+        ]
+    )

@@ -1,43 +1,24 @@
 {% extends "base.html" %}
-{% block title %}Manage Meals{% endblock %}
+{% block title %}Meals | Nutrition Tracker{% endblock %}
+
 {% block content %}
-<div id="message"></div>
-<div class="container">
-    <h2 class="text-center mt-3 mb-4">Manage Your Meals Database</h2>
-    <!-- search inp -->
-    <label for="mealName">Meals already in the database:</label>
-    <div class="form-group">
-        <input type="text" id="searchInput" class="form-control meals-management-input" placeholder="Start typing name of a meal..." oninput="searchMeals(this.value)">
-    </div>
+<h2>Meal Management</h2>
 
-    <!-- search results list -->
-    <ul id="mealsList" class="list-group mb-5"></ul>
-
-    <h2 class="text-center mt-3 mb-4">Add a new meal to your database</h2>
-    <div class="form-group">
-        <label for="mealName">Meal Name:</label>
-        <input type="text" class="form-control meals-management-input" id="mealName">
-    </div>
-    <div class="form-group">
-        <label for="calories">Calories (per 100g):</label>
-        <input type="number" step="1.0" class="form-control meals-management-input" id="calories">
-    </div>
-    <div class="form-group">
-        <label for="carbs">Carbohydrates (g per 100g):</label>
-        <input type="number" step="1.0" class="form-control meals-management-input" id="carbs">
-    </div>
-    <div class="form-group">
-        <label for="proteins">Proteins (g per 100g):</label>
-        <input type="number" step="1.0" class="form-control meals-management-input" id="proteins">
-    </div>
-    <div class="form-group">
-        <label for="fats">Fats (g per 100g):</label>
-        <input type="number" step="1.0" class="form-control meals-management-input" id="fats">
-    </div>
-    <button onclick="addMeal()" class="btn btn-primary">Add Meal</button>
+<div class="form-group">
+    <label for="mealSearch">Search Meals</label>
+    <input type="text" id="mealSearch" class="form-control meals-management-input" placeholder="Search your meals...">
 </div>
-<script src="{{ url_for('static', filename='meals.js') }}"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<ul id="mealsList" class="list-group"></ul>
+
+<h3 class="mt-5">Add Custom Meal</h3>
+<div class="form-group"><input id="mealName" class="form-control meals-management-input" placeholder="Meal name"></div>
+<div class="form-group"><input id="calories" type="number" class="form-control meals-management-input" placeholder="Calories per 100g"></div>
+<div class="form-group"><input id="carbs" type="number" class="form-control meals-management-input" placeholder="Carbs per 100g"></div>
+<div class="form-group"><input id="proteins" type="number" class="form-control meals-management-input" placeholder="Proteins per 100g"></div>
+<div class="form-group"><input id="fats" type="number" class="form-control meals-management-input" placeholder="Fats per 100g"></div>
+<button id="addMealButton" class="btn btn-primary">Add Meal</button>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/meals.js') }}"></script>
 {% endblock %}

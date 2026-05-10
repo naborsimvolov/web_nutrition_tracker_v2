@@ -1,29 +1,45 @@
-from flask import Blueprint, render_template, request, jsonify
-from flask_login import login_required, current_user
+from __future__ import annotations
+
+from flask import Blueprint, jsonify, render_template, request
+from flask_login import current_user, login_required
+
 from ..models import update_user_goals
 
-user_profile = Blueprint('user_profile', __name__)
+user_profile = Blueprint("user_profile", __name__)
 
-@user_profile.route('/profile')
+
+def _parse_positive_float(value, field_name: str) -> float:
+    try:
+        parsed = float(value)
+    except (TypeError, ValueError) as error:
+        raise ValueError(f"{field_name} must be a number") from error
+
+    if parsed < 0:
+        raise ValueError(f"{field_name} must be non-negative")
+
+    return parsed
+
+
+@user_profile.route("/profile")
 @login_required
 def profile():
-    return render_template('userprofile.html', user=current_user)
+    return render_template("userprofile.html", user=current_user)
 
-@user_profile.route('/save-goals', methods=['POST'])
+
+@user_profile.route("/save-goals", methods=["POST"])
 @login_required
 def save_goals():
-    data = request.get_json()
-    if not data:
-        return jsonify({'error': 'Invalid data'}), 400
+    data = request.get_json(silent=True) or {}
+
     try:
-        # user goals in database update
         update_user_goals(
             user=current_user,
-            calories_goal=data.get('calories'),
-            carbs_goal=data.get('carbs'),
-            proteins_goal=data.get('proteins'),
-            fats_goal=data.get('fats')
+            calories_goal=_parse_positive_float(data.get("calories"), "Calories goal"),
+            carbs_goal=_parse_positive_float(data.get("carbs"), "Carbs goal"),
+            proteins_goal=_parse_positive_float(data.get("proteins"), "Proteins goal"),
+            fats_goal=_parse_positive_float(data.get("fats"), "Fats goal"),
         )
-        return jsonify({'success': 'Goals saved successfully!'}), 200
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+    except ValueError as error:
+        return jsonify({"error": str(error)}), 400
+
+    return jsonify({"success": "Goals saved successfully."})

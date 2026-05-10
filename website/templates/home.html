@@ -1,18 +1,19 @@
 {% extends "base.html" %}
-
-{% block title %}Home{% endblock %}
+{% block title %}Home | Nutrition Tracker{% endblock %}
 
 {% block content %}
-<div class="container mt-4">
-    <h1>Welcome to the Open Nutrition Tracker!</h1>
-    <p class="lead">Open Nutrition Tracker helps you easily manage your daily nutritional intake.</p>
-    <p class="lead">
-        With Open Nutrition Tracker, you can:
-        <ul class="custom-bullet">
-            <li>Calculate nutritional values for a wide range of meals.</li>
-            <li>Customize your own meals database by adding new entries.</li>
-            <li>Track and review your nutrition history over time.</li>
-        </ul>
-    </p>
-</div>
+<h2>Private Nutrition Tracking</h2>
+<p class="lead">
+    A self-hosted nutrition tracker for logging calories, proteins, fats and carbohydrates without relying on a commercial app.
+</p>
+<ul class="custom-bullet">
+    <li>Track meals and daily nutrition totals.</li>
+    <li>Add custom foods to your personal database.</li>
+    <li>View historical nutrition charts.</li>
+    <li>Keep data in your own self-hosted app.</li>
+</ul>
+{% if not current_user.is_authenticated %}
+<a href="{{ url_for('auth.sign_up') }}" class="btn btn-primary mt-3">Create Account</a>
+<a href="{{ url_for('auth.login') }}" class="btn btn-outline-light mt-3">Login</a>
+{% endif %}
 {% endblock %}
